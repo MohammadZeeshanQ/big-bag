@@ -130,9 +130,9 @@
 
                                 <div class="sample-input-container">
                                     <div class="sample-input-wrapper">
-                                        <i class="fas fa-plus sample-input-icon"></i>
-                                        <p id="counter" class="sample-input-value">1</p>
-                                        <i class="fas fa-minus sample-input-icon"></i>
+                                        <i class="fas fa-plus sample-input-icon" onclick="addBag()"></i>
+                                        <p id="counter" class="sample-input-value" >1</p>
+                                        <i class="fas fa-minus sample-input-icon" onclick="removeBag()"></i>
                                     </div>
                                     <button class="sample-button">
                                         <a href='#' class="sample-button-link">Add to Bag</a>
@@ -151,7 +151,7 @@
 
 
     <!-- Feature Section -->
-        <section class="feature-section">
+        <div class="feature-section">
             <div class="feature-container">
                 <div class="feature-wrapper">
                     <div class="feature-header-wrapper">
@@ -264,7 +264,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     <!-- Feature Section End -->
 
 
@@ -317,6 +317,45 @@
             </div>
         </section>
     <!-- Subscribe Section End -->
+
+    <!-- Counter Script -->
+    <script>
+        var oldValue = parseInt(document.getElementById('counter').innerText);
+        console.log('Bag Quantity: ', oldValue);
+
+        function addBag() {
+            if (oldValue < 9) {
+                newValue = ++oldValue;
+                document.getElementById('counter').innerText = newValue;
+                console.log('Bag Quantity: ', oldValue);
+            }
+            else if (oldValue <= 1) {
+                alert('Sorry Maximum Order Selected.');
+                return;
+            }
+            else{
+                alert('Sorry Maximum Order Selected.');
+                return;
+            }
+        }
+
+        function removeBag() {
+            if (oldValue > 1) {
+                newValue = --oldValue;
+                document.getElementById('counter').innerText = newValue;
+                console.log('Bag Quantity: ', oldValue);
+            }
+            else if (oldValue <= 0) {
+                alert('Sorry Minimum Order Selected.');
+                return;
+            }
+            else{
+                alert('Sorry Minimum Order Selected.');
+                return;
+            }
+        }
+
+    </script>
     
 
 </body>
