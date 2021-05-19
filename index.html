@@ -7,6 +7,8 @@
     <link rel="stylesheet/less" type="text/css" href="styles.less" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13" ></script>
     <script src="https://kit.fontawesome.com/e24903bcd2.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <title>BigBag</title>
 </head>
 
@@ -89,10 +91,46 @@
         <section class="sample-section">
            <div class="sample-container">
                <div class="sample-wrapper">
-                   <div class="sample-grid">
-                       <div class="sample-gridItem">
 
+                   <div class="sample-grid">
+                       <div class="sample-gridItem-image">
+                            <img class="sample-grid-image" src="./assets/images/product/product4.png" alt="Bag Picture" />
                        </div>
+
+                       <div class="sample-gridItem-text">
+
+                            <div class="sample-text-wrapper">
+                                <h2 class="sample-header">Orange Dumping Bag</h2>
+                                <p class="sample-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Repellat nihil nam animi consequuntur porro debitis!
+                                </p>
+                            </div>
+                            <div class="sample-color-wrapper">
+                                <i class="fas fa-circle sample-colour-circle-red"></i>
+                                <i class="fas fa-circle sample-colour-circle-yellow"></i>
+                                <i class="fas fa-circle sample-colour-circle-blue"></i>
+                                <i class="fas fa-circle sample-colour-circle-black"></i>
+                            </div>
+                            <div class="sample-price-wrapper">
+                                <h2 class="sample-price-crossed">$80</h2>
+                                <h2 class="sample-price-visible">$60</h2>
+                            </div>
+                            <div class="sample-quantity-wrapper">
+
+                                <div class="sample-input-container">
+                                    <div class="sample-input-wrapper">
+                                        <i class="fas fa-plus sample-input-icon"></i>
+                                        <p id="counter" class="sample-input-value">1</p>
+                                        <i class="fas fa-minus sample-input-icon"></i>
+                                    </div>
+                                    <button class="sample-button">
+                                        <a href='#' class="sample-button-link">Add to Bag</a>
+                                    </button>
+                                </div>
+
+                            </div>
+                       </div>
+                   
                    </div>
                </div>
            </div>     
@@ -104,6 +142,33 @@
 
         </section>
     <!-- Feature Section End -->
+
+
+      <!-- testimonial Section -->
+      <section class="testimonial-section">
+          <div class="carousel-container">
+          <h2 class="carousel-header">What Our Customer Are Saying</h2>
+          <p class="carousel-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, quibusdam?
+          </p>
+
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-wrapper">
+                    <img class="carousel-image" src="./assets/images/testimonial.png" alt="Customer Testimonials"/>
+                    <img class="carousel-image-large" src="./assets/images/testimonial.png" alt="Customer Testimonials"/>
+                    <img class="carousel-image" src="./assets/images/testimonial.png" alt="Customer Testimonials"/>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+        </section>
+    <!-- testimonial Section End -->
+
+    
 
     <!-- Subscribe Section -->
         <section class="subscribe-section">

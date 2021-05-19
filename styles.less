@@ -132,6 +132,16 @@
   }
 }
 
+.circleIcons() {
+  font-size: 2rem;
+  color: @primaryOrange;
+  margin: 0 0.4rem;
+
+  @media (min-width: 605px) and (max-width: 900px) {
+    font-size: 1.5rem;
+  }
+}
+
 .footerBasicHeader() {
   font-family: semi;
   margin-bottom: 1rem;
@@ -158,7 +168,7 @@
 
   @media (max-width: 600px) {
     font-size: 2rem;
-    margin: 3rem 0.8rem 0rem 0.8rem;
+    margin: 0rem 0.8rem;
   }
 
   @media (min-width: 605px) and (max-width: 900px) {
@@ -305,7 +315,220 @@
 //
 // Sample Section
 .sample-section {
+  .sample-container {
+    .sample-wrapper {
+      .centerTheme();
+      padding: 4rem 0;
+
+      .sample-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        @media (max-width: 600px) {
+          grid-template-columns: 100%;
+        }
+
+        .sample-gridItem-image {
+          @media (max-width: 600px) {
+            grid-row: 2;
+          }
+
+          .sample-grid-image {
+            width: 25rem;
+            height: 100%;
+            object-fit: cover;
+
+            @media (max-width: 600px) {
+              width: 20rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            @media (min-width: 605px) and (max-width: 900px) {
+              width: 13rem;
+            }
+          }
+        }
+
+        .sample-gridItem-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+
+          @media (max-width: 600px) {
+            text-align: center;
+            align-items: center;
+          }
+
+          .sample-text-wrapper {
+            .sample-header {
+              .mainHeader();
+            }
+            .sample-description {
+              .mainDescription();
+            }
+          }
+
+          .sample-color-wrapper {
+            padding: 1rem 0;
+
+            @media (max-width: 600px) {
+              margin: auto;
+            }
+
+            .sample-colour-circle-yellow {
+              .circleIcons();
+              color: #f1cf10;
+            }
+            .sample-colour-circle-red {
+              .circleIcons();
+              color: @primaryOrange;
+            }
+            .sample-colour-circle-black {
+              .circleIcons();
+              color: #1d1d1d;
+            }
+            .sample-colour-circle-blue {
+              .circleIcons();
+              color: #07006d;
+            }
+          }
+          .sample-price-wrapper {
+            padding: 1rem 0;
+            font-family: semi;
+            font-size: 1.3rem;
+            display: flex;
+
+            @media (max-width: 600px) {
+              margin: auto;
+            }
+
+            @media (min-width: 605px) and (max-width: 900px) {
+              font-size: 0.8rem;
+            }
+
+            .sample-price-crossed {
+              color: @primaryOrangetext;
+              text-decoration: 3px black line-through;
+            }
+            .sample-price-visible {
+              margin: 0 1rem;
+            }
+          }
+
+          .sample-input-container {
+            display: flex;
+            padding: 1rem 0;
+
+            @media (max-width: 600px) {
+              flex-direction: column;
+            }
+            .sample-input-wrapper {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border: 1px #c2c2c2 solid;
+              padding: 0.5rem 0.2rem;
+
+              .sample-input-icon {
+                .iconSize();
+
+                @media (max-width: 600px) {
+                  margin: 0;
+                }
+              }
+              .sample-input-value {
+                margin: 0 2rem;
+                font-size: 1.5rem;
+                font-family: semi;
+
+                @media (min-width: 605px) and (max-width: 900px) {
+                  font-size: 0.8rem;
+                  margin: 0 1rem;
+                }
+              }
+            }
+            .sample-button {
+              .primaryButton();
+              margin: 0 2rem;
+
+              @media (max-width: 600px) {
+                margin: 1rem 1rem;
+              }
+              .sample-button-link {
+                .linkRemoval();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+//
+//
+
+//
+// Carousel Section
+.carousel-container {
+  .centerTheme();
+  text-align: center;
+  padding: 6rem 0 8rem 0;
+
+  @media (max-width: 600px) {
+    padding: 0 0 6rem 0;
+  }
+
+  @media (min-width: 605px) and (max-width: 900px) {
+    padding: 0 0 2rem 0;
+  }
+
+  .carousel-header {
+    .mainHeader();
+  }
+  .carousel-description {
+    .mainDescription();
+  }
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+    }
+
+    .carousel-image {
+      width: 20rem;
+      height: 100%;
+      object-fit: contain;
+
+      @media (max-width: 600px) {
+        width: 18rem;
+      }
+
+      @media (min-width: 605px) and (max-width: 900px) {
+        width: 10rem;
+      }
+    }
+    .carousel-image-large {
+      width: 24rem;
+      height: 100%;
+      object-fit: contain;
+
+      @media (max-width: 600px) {
+        width: 18rem;
+      }
+
+      @media (min-width: 605px) and (max-width: 900px) {
+        width: 12rem;
+      }
+    }
+  }
+}
+
 //
 //
 
@@ -315,6 +538,10 @@
   .subscribe-container {
     position: relative;
     padding: 8em 0;
+
+    @media (max-width: 600px) {
+      padding: 4em 0;
+    }
 
     @media (min-width: 605px) and (max-width: 900px) {
       padding: 4em 0;
